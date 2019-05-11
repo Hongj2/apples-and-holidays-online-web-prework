@@ -57,6 +57,7 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
+<<<<<<< HEAD
   
   
    holiday_hash.each do |season, data|
@@ -76,6 +77,9 @@ def all_supplies_in_holidays(holiday_hash)
   end
 
 
+=======
+  holiday_hash.each  
+>>>>>>> 4b8c50c7b9405890820818f7fa2dde4c9d9544c6
 
 
 end
@@ -85,6 +89,7 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
 #holiday_hash.key("BBQ")
 
+<<<<<<< HEAD
 holidays_with_bbq = [] 
  holiday_hash.each {|season, holidays|
   holidays.each {|holiday, supplies|
@@ -96,6 +101,17 @@ holidays_with_bbq = []
   }
 }
 holidays_with_bbq
+=======
+ holiday_hash.delete_if {|season, holidays|
+  holidays.keep_if {|holiday, supplies|
+  
+    supplies.keep_if {|supply|
+    supply == "BBQ"
+    }
+  }
+}
+
+>>>>>>> 4b8c50c7b9405890820818f7fa2dde4c9d9544c6
 end
 
 
